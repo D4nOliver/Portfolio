@@ -1,0 +1,414 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@400;600;700&display=swap");
+@import url(animation.css);
+@import url(responsive.css);
+:root {
+  --background: #e5eaef;
+  --primary: #84888e;
+  --secondary: #315e93;
+  --tertiary: #fbfcfe;
+  --white: #ffffff;
+  --title: #102032;
+  --text: #97a3b0;
+  --animation: #c79800;
+  --container: 1216px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  background: var(--background);
+
+  font-family: "Raleway", "Lato";
+
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Header */
+header {
+  max-width: var(--container);
+  margin: 0px 50px;
+  margin-top: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+hr {
+  margin: 50px 50px;
+}
+/* titulo nome */
+#nome h2 {
+  font-size: 2.4rem;
+  font-style: normal;
+}
+
+#nome h2 span {
+  color: var(--primary);
+}
+/* lista de links */
+ul {
+  list-style: none;
+  display: flex;
+}
+
+header ul li:not(:first-child) {
+  margin-left: 24px;
+}
+
+/* nav de icones sociais */
+nav ul a {
+  text-decoration: none;
+  display: block;
+}
+
+ul#links a {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--title);
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+
+ul#redes img {
+  display: block;
+  width: 3.2rem;
+}
+
+section#inicio {
+  max-width: var(--container);
+  margin: 0 auto;
+
+  height: calc(100vh - (40px + 29px));
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
+section#inicio img {
+  display: block;
+  object-fit: contain;
+  width: 35rem;
+  border-radius: 10px;
+
+  -webkit-mask-image: linear-gradient(to left, var(--background), transparent);
+  mask-image: linear-gradient(to left, var(--background), transparent);
+
+  position: absolute;
+  right: 40px;
+  z-index: -1;
+}
+
+section#inicio h1 {
+  width: 100%;
+  height: auto;
+  font-size: 8.8rem;
+  font-weight: 600;
+}
+
+section#inicio h1 span {
+  width: 100%;
+  color: var(--primary);
+  display: block;
+}
+
+section#formacao {
+  background-color: var(--tertiary);
+}
+
+section#formacao div#conteudo-formacao {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+div#conteudo-formacao h2 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 5.6rem;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+div#conteudo-formacao h2 span {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 2.8rem;
+  letter-spacing: 0em;
+
+  color: var(--primary);
+
+  display: block;
+}
+
+div#conteudo-formacao li.formacao-item {
+  display: flex;
+  font-family: "Lato";
+}
+
+div#conteudo-formacao li.formacao-item img {
+  height: 8.3rem;
+  border: 1px solid #e1e6ec;
+  border-radius: 8px;
+}
+
+div#conteudo-formacao ul#lista-formacao {
+  flex-direction: column;
+  margin-top: 3.7rem;
+}
+
+li.formacao-item:not(:first-child) {
+  margin-top: 4.5rem;
+}
+li.formacao-item img {
+  height: 81px;
+  width: 81px;
+}
+li.formacao-item div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 5px;
+  margin-left: 24px;
+}
+
+li.formacao-item div h3 a {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+
+  color: var(--title);
+}
+
+li.formacao-item p.descricao-formacao {
+  font-size: 1.6rem;
+}
+
+li.formacao-item p.onde {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+
+  color: var(--secondary);
+}
+
+li.formacao-item p.quando {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+
+  color: var(--text);
+}
+
+/* Seção Conhecimentos */
+section#habilidades {
+  background-color: var(--primary);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+section#habilidades div#conteudo-habilidades {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 15.4rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section#habilidades div#conteudo-habilidades h2 {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 4.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div#conteudo-habilidades h2 span {
+  font-size: 3.4rem;
+}
+
+div#conteudo-habilidades ul#tecnologias {
+  width: 100%;
+  margin: 4.9rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+ul#tecnologias li.tecnologia {
+  background-color: var(--white);
+}
+
+li.tecnologia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 15.9rem;
+  height: 15.9rem;
+  border-radius: 0.5rem;
+
+  box-shadow: 0px 3.6rem 2.8rem -2.4rem rgba(0, 0, 0, 0.2);
+}
+
+li.tecnologia img {
+  width: 5.1rem;
+  height: 5.9rem;
+}
+
+li.tecnologia p {
+  font-family: "Lato";
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: var(--primary);
+  margin-top: 8px;
+}
+
+section#publicacoes div#conteudo-publicacoes {
+  max-width: var(--container);
+  padding: 8rem 0;
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+div#conteudo-publicacoes article.publicacao {
+  display: flex;
+  align-items: center;
+
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 24px 26px 0;
+
+  box-shadow: 0 2.8rem 3.6rem -1.6rem rgba(0, 0, 0, 0.1);
+}
+
+section#publicacoes div#conteudo-publicacoes h2 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 5.6rem;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+section#publicacoes div#conteudo-publicacoes h2 span {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 2.8rem;
+  letter-spacing: 0em;
+
+  color: var(--primary);
+
+  display: block;
+}
+
+div#conteudo-publicacoes article.publicacao:not(:first-child) {
+  margin-top: 2.4rem;
+}
+
+div#conteudo-publicacoes article.publicacao div.info__publicacao {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 24px;
+}
+
+article.publicacao div.info__publicacao h3 {
+  font-size: 2.4rem;
+  color: var(--title);
+}
+
+article.publicacao div p {
+  font-family: "Lato";
+  font-size: 1.6rem;
+  color: var(--text);
+
+  margin-top: 1rem;
+}
+
+footer {
+  height: 100vh;
+  background-color: var(--primary);
+}
+
+footer div#conteudo-footer {
+  max-width: var(--container);
+  height: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+div#conteudo-footer div#info-footer {
+  color: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div#conteudo-footer div#info-footer h2 {
+  font-size: 4.8rem;
+  text-align: center;
+}
+
+div#conteudo-footer div#info-footer p {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+nav#navfooter {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  gap: 2rem;
+}
+
+nav#navfooter .linksfooter img {
+  width: 5rem;
+  height: 5rem;
+}
